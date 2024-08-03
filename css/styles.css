@@ -1,0 +1,44 @@
+/*
+COLOR PALETTE
+
+Off-white       #F6F6F6
+Outer space     #484A47
+Honolulu Blue   #057DCD
+Pumpkin         #FF6700
+*/
+
+/*/--------- GLOBAL STYLES ---------/*/
+body {
+    background: #F6F6F6
+}
+
+/*/--------- HOME ---------/*/
+.home {
+    background: url(../images/bg-home-office-studio.jpg) no-repeat;
+    background-size: cover;
+}
+.home .content-wrapper {
+    background: rgb(255 255 255 / 0.9);
+}
+
+/*/--------- RESUME ---------/*/
+
+/*/--------- Profile ---------/*/
+
+
+/*/--------- Projects ---------/*/
+
+
+/*/--------- Work Experience ---------/*/
+
+
+/*/--------- Education ---------/*/
+
+
+
+/*/--------- FOOTER ---------/*/
+footer {
+    background: #484A47;
+    color: #d3d4d6
+}
+
