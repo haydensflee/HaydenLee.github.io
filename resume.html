@@ -2,116 +2,193 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Hayden Lee | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="resume">
+    <!-- <a class="btn download-link" href="ctruong-resume.pdf" download>Download PDF</a> -->
     <!-- //  INTRO  // -->
+    <!-- <header class="title-card">
+      <div class="content-wrapper flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <header>
+          
+            <h1 class="name">Hayden Lee</h1>
+            <h2>Software Engineer</h2>
+          
+        </header>
+      </div>
+    </header> -->
     <header>
-      <!-- Start content edits below this line. -->
-      <h1>Hayden Lee</h1>
-      <h2>Software Engineer</h2>
-
-      <!-- End content edits here. -->
+      <div class="content-wrapper title-card flex-container">
+        <div class="flex-image">
+        </div>
+        <div class="flex-item">
+          
+          <h1 class="personal_text">Hayden Lee</h1>
+          <h2>Software Engineer</h2>
+          <p>I am a software engineer and a part time freelancer. I blog tech, write a weekend newsletter called software shots, and tinker with side projects every now n then...</p>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <!-- //  PROFILE  // -->
-      <section>
-        <!-- Start content edits below this line. -->
-        <h2>Profile</h2>
-        <p>Add your resume summary/profile here. Add more paragraphs or links as needed.</p>
-        <a href="index.html">Back to homepage</a>
+    <!-- <header>
+      <div class="content-wrapper">
+        <h1 class="name">Hayden Lee</h1>
+        <h2>Software Engineer</h2>
+      </div>
+    </header> -->
 
-        <!-- End content edits here. -->
-      </section>
-
-      <!-- //  PROJECTS  // -->
-      <section>
-        <!-- Start content edits below this line. -->
-        <h2>Projects</h2>
-        <p>Optional paragraph for the Projects summary. Delete if not being used.</p>
-
-        <!-- To add more items, copy this whole <section></section> block-->
-        <section>
-          <img src="" srcset="" alt="description of image" width="" height="">
-          <h3>Project Name</h3>
-          <p>Summary or description of the project and/or your role in it. Add as many paragraphs as you need.</p>
-          <!-- link to project -->
-          <a href="#" target="_blank">Link</a>
-          <!-- additional links, e.g. newsletter -->
-          <a href="#" target="_blank">Another link</a>
-        </section>
-        
-        <!-- End content edits here. -->
-      </section>
-
-      <!-- //  WORK EXPERIENCE  // -->
-      <section>
-        <!-- Start content edits below this line.  -->
-        <h2>Work Experience</h2>
-        <p>Optional paragraph for work experience summary. Not a part of the job details. Delete if not being used.</p>
-
-        <!-- To add more items, copy this whole <section></section> block -->
-        <section>
-          <h3>Job title</h3>
-          <p>Company Name</p>
-          <p>Date at job</p>
-          <p>Job summary goes here. Add as many paragraphs as you need.</p>
-          <p>Optional list:</p>
-          <ul>
-            <li>Delete this list if you don't need it.</li>
-            <li>Created...</li>
-            <li>Lead...</li>
-            <li>Responsible for...</li>
-          </ul>
-        </section>
-
-        <!-- End content edits here. -->
-      </section>
-
+    <main class="content-wrapper">
       <!-- //  EDUCATION & CERTIFICATIONS  // -->
-      <section>
+      <section class="resume-section">
         <!-- Start content edits below this line.  -->
         <h2>Education</h2>
+        <section class="education-item">
+          <h3>University of Adelaide (2018-2022)</h3>
+          <h4>6.50 GPA with First Class Honours</h4>
+          <p>Bachelor of Engineering (Honours) (Mechatronics Major)</p>
+          <p>Bachelor of Computer Science (AI Major)</p>
+        </section>
+      </section>
+      <!-- //  WORK EXPERIENCE  // -->
+      <section class="resume-section">
+        <!-- Start content edits below this line.  -->
+        <h2>Work Experience</h2>
+        <p>My complete work history is available on <a href="https://ca.linkedin.com/in/christinatruong" target="_blank">LinkedIn</a>.</p>
 
-        <!-- To add more items, copy this whole <section></section> block -->
-        <section>
-          <h3>School name - City</h3>
-          <p>Designation received or program name, year attended</p>
-          <p>Summary or accomplishments.</p>
+        <section class="work-item">
+          <div class="work-details">
+            <h3>Sonar Software Engineer</h3>
+            <p>Defence Science and Technology Group</p>
+            <p>Jan 2023 - Present</p>
+          </div>
+          
+          <div class="work-summary">
+            <p>Developed and maintained software systems for undersea sensor systems and sonar data processing. Engaged in self-managed research activities for generating synthetic audio data using generative AI technologies.</p>
+            <p>Key contributions:</p>
+            <ul>
+              <li>Built and deployed a Docker development environment for cross compiling onto multiple different ARM architecture computers, leveraging containerisation for streamlined development.</li>
+              <li>Leveraged Qt Framework to build a message logging system to record simulation events. Improved memory efficiency by storing messages as byte objects, and demonstrated OOP concepts to develop byte-parsing interface.</li>
+              <li>Used Tensorflow to develop a Generative Adversarial Network (GAN) model to recognise audio data characteristics and synthesise realistic artificial data.</li>
+              <li>Collaborated with team members from project planning to executing effective git version control processes to provide technical support and communication.</li>
+              <li>Worked in an agile environment and followed the scrum process to develop and maintain full-stack software systems.</li>
+            </ul>
+          </div>
         </section>
 
-        <!-- End content edits here. -->
-      </section>
-    </main>
+        <section class="work-item">
+          <div class="work-details">
+            <h3>STEM Cadet</h3>
+            <p>Defence Science and Technology Group</p>
+            <p>Jan 2021 - Jan 2023</p>
+          </div>
+          
+          <div class="work-summary">
+            <p>Supported DSTG work programs by developing in-house software tools and undertaking simulation and analysis tasks in accordance with stakeholder plans and requirements.</p>
+            <p>Key contributions:</p>
+            <ul>
+              <li>Developed a Qt3D simulation visualisation GUI. Implemented a publish-subscribe design pattern using a custom abstract item model/view control architecture to reduce system complexity and ensure scalability.</li>
+              <li>Directed and delivered a Monte Carlo study using design of experiments techniques to analyse statistical variance in torpedo performance, understand torpedo decision-making and behaviours, and build domain knowledge.</li>
+              <li>Performed model verification by developing a submarine dynamics MATLAB model from first principles and comparing and contrasting its performance against DSTG's hydroacoustics capability.</li>
+            </ul>
+          </div>
+        </section>
+  
+        <section class="work-item">
+          <div class="work-details">
+            <h3>Undergraduate Systems Engineer</h3>
+            <p>University of Adelaide</p>
+            <p>Feb 2020 - Dec 2020</p>
+          </div>
+          
+          <div class="work-summary">
+            <p>Contributed to the design of the Australian Research and Experimental Submarine (ARES) at the University of Adelaide.</p>
+            <p>Key contributions:</p>
+            <ul>
+              <li>Engaged with stakeholders to generate system requirements to lead control system and control surfaces design.</li>
+              <li>Developed and demonstrated a proof-of-concept onboard control system for depth-keeping using microcontroller technologies.</li>
+              <li>Delivered technical specification and justification report for control system and control surfaces design.</li>
+            </ul>
+          </div>
+        </section>
+    
 
+      <!-- //  PROJECTS  // -->
+      <section class="resume-section">
+        <h2>Projects</h2>
+        <p>View selected projects below. More information can be found at <a href="https://christinatruong.com" target="_blank">christinatruong.com</a>.</p>
+
+        <div class="project-wrapper">
+          <section class="project-item">
+            <img src="images/project-decoded-youtube-500px.png" srcset="images/project-decoded-youtube-1000px.png 2x" alt="Decoded by Christina YouTube video thumbnails">
+            <h3>Cave Exploration (CaveX) Robot</h3>
+            <p>Videos, tutorials and a newsletter focusing on HTML, CSS and working in tech. Each video focuses on one HTML or CSS concept. I go over how it works, when to use it and show some real world examples. The companion articles are also posted on Medium as an alternative to video content.</p>
+            <a class="btn" href="https://www.youtube.com/@madebychristina" target="_blank">YouTube</a>
+            <a class="btn" href="https://medium.com/@christinatruong" target="_blank">Medium</a>
+            <a class="btn" href="https://bychristina.substack.com/" target="_blank">Newsletter</a>
+          </section>
+
+          <section class="project-item">
+            <img src="images/project-courses-500px.png" srcset="images/project-courses-1000px.png 2x" alt="List of course names and thumbnails">
+            <h3>Noughts and Crosses Game</h3>
+            <p>Developed content and instruction for various web development courses including CSS Essential Training, Getting Your Website Online, Getting Your First Job as a Web Developer and more.</p>
+            <a class="btn" href="https://christinatruong.com/courses/" target="_blank">Courses</a>
+          </section>
+
+          <section class="project-item">
+            <img src="images/project-troy-podcast-500px.png" srcset="images/project-troy-podcast-1000px.png 2x" alt="The TROY podcast website homepage">
+            <h3>Distributed Decision Making Simulation System</h3>
+            <p>A podcast that celebrates the best in music, movies, and TV from the past. Hosted by knowledgeable and passionate fans of the genres, Christina and Miguel delve into the careers and legacies of some of the biggest names in hip hop, R&B, and pop culture. Join us as we reminisce over the artists that have shaped our lives and continue to influence popular culture today. (I also built the website of course!)</p>
+            <a class="btn" href="https://troypodcast.com/" target="_blank">Website</a>
+            <a class="btn" href="https://podcasts.apple.com/us/podcast/they-reminisce-over-you/id1541737531" target="_blank">Apple</a>
+            <a class="btn" href="https://open.spotify.com/show/7JsQ0j7qldRFpHt63AI8Cn" target="_blank">Spotify</a>
+          </section>
+          
+          <section class="project-item">
+            <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-1000px.png 2x" alt="The Wire Ipsum quote generator website">
+            <h3>Chessboard Game</h3>
+            <p>After coming back from teaching a JavaScript workshop, I felt inspired to create something just for fun. I realized that of all the placeholder text/lorem ipsum generators available, there was nothing for HBO’s The Wire fans. Generate some content for your projects today. (Warning: Contains explicit language.)</p>
+            <a class="btn" href="https://thewireipsum.com" target="_blank">Website</a>
+          </section>
+        </div>
+      </section>
+
+      
+
+
+      
+
+    </main>
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer>
-      <!-- Start content edits below this line. -->
-      <p>© 2023 by Your Name | <a href="mailto:email@example.com">email@example.com</a></p>
+      <p>© 2023 by Christina Truong |  <a href="mailto:email@example.com">email@example.com</a></p>
 
-      <!-- Add or remove any networks. -->
-      <ul>
+      <ul class="socials">
         <li>
-          <a href="#" target="_blank">Twitter</a>
+          <a href="https://www.youtube.com/@madebychristina" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube channel"></a>
         </li>
         <li>
-          <a href="#" target="_blank">LinkedIn</a>
+          <a href="https://ko-fi.com/christinatruong" target="_blank"><img src="images/icon-logo-ko-fi.png" alt="My Ko-Fi homepage"></a>
         </li>
         <li>
-          <a href="#" target="_blank">Facebook</a>
+          <a href="https://medium.com/@christinatruong" target="_blank"><img src="images/icon-logo-medium.png" alt="My Medium homepage"></a>
         </li>
         <li>
-          <a href="#" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/christina.is.online/" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram"></a>
         </li>
         <li>
-          <a href="#" target="_blank">Instagram</a>
+          <a href="https://ca.linkedin.com/in/christinatruong" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/christinatruong" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter profile"></a>
         </li>
       </ul>
-      
-      <!-- End content edits here. -->
     </footer>
   </body>
 </html>
