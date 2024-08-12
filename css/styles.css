@@ -14,7 +14,7 @@ Pumpkin         #FF6700
 */
 html {
     box-sizing: border-box;
-    font-size: 62.5%; /* set default to 10px */
+    font-size: 80%; /* set default to 10px */
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -27,23 +27,23 @@ body {
     background: #252525; 
     margin: 0;
     color: #b6b4b4;
-    font-family: "roboto", 'Open Sans', sans-serif;
+    font-family: "Rubik", "roboto", 'Open Sans', sans-serif;
     font-size: 1.5rem;
     line-height: 1.4;
     /* font-weight: 400; */
 }
 
 .title-card {
-    background: #353535;
+    background: #ffffff;
     height: 300px;
 
 }
 
 h1, h2, h3 {
-    font-family: 'roboto', cursive;
-    font-weight: 900;
+    font-family: "Rubik", cursive;
+    font-weight: 700;
     margin: 0;
-    color: #f5f5f5;
+    color: #d4d4d4;
 }
 .name::first-letter {
     color: #057DCD
@@ -52,6 +52,7 @@ h1 {
     font-size: 7rem;
     line-height: 0.85;
 }
+
 h2 {
     font-size: 3.6rem;
 }
@@ -93,6 +94,9 @@ footer a:hover {
     max-width: 1400px;
 }
 
+.first-word {
+  color: #057DCD;
+}
 
 /* HOME
 ------------------------------------*/
@@ -126,12 +130,13 @@ footer a:hover {
     content: "hello";
     display: block; 
     height: 200px;
+    background: "white";
     /* margin: -200px 0 0; */
 }
 
 .resume header {
     background: #252525;
-    height: 900px;
+    height: 800px;
 }
 
 .resume header .content-wrapper {
@@ -218,10 +223,27 @@ header .flex-image{
 }
 
 .resume-section {
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.work-experience {
+    background: #202020;
+    padding: 10px;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.work-experience .resume-section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background: #202020;
+
+    
 }
 .resume-section h2 {
-    border-bottom: 2px dashed #d3d4d6;
+    /* border-bottom: 2px groove #d3d4d6; */
+    text-align: center;
+    padding-bottom: 20px;
 }
 .download-link {
     position: fixed;

@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   </head>
   <body class="resume">
     <!-- <a class="btn download-link" href="ctruong-resume.pdf" download>Download PDF</a> -->
@@ -24,15 +27,18 @@
         </header>
       </div>
     </header> -->
+    <!-- <section class="title-card">
+      helloasdf
+    </section> -->
     <header>
       <div class="content-wrapper title-card flex-container">
         <div class="flex-image">
         </div>
         <div class="flex-item">
           
-          <h1 class="personal_text">Hayden Lee</h1>
+          <h1 class="personal_text"><span class="first-word">Hayden</span> Lee</h1>
           <h2>Software Engineer</h2>
-          <p>I am a software engineer and a part time freelancer. I blog tech, write a weekend newsletter called software shots, and tinker with side projects every now n then...</p>
+          <p>I am a software engineer with a background in Mechatronics Engineering and Computer Science (AI Major). With a comprehensive knowledge of data structures and algorithms, I am passionate about using code to breathe life into technology!</p>
         </div>
       </div>
     </header>
@@ -44,11 +50,12 @@
       </div>
     </header> -->
 
-    <main class="content-wrapper">
+    <main>
       <!-- //  EDUCATION & CERTIFICATIONS  // -->
-      <section class="resume-section">
+      <section class="content-wrapper resume-section">
+
         <!-- Start content edits below this line.  -->
-        <h2>Education</h2>
+        <h2><span class="first-word">Education </span> and Skills</h2>
         <section class="education-item">
           <h3>University of Adelaide (2018-2022)</h3>
           <h4>6.50 GPA with First Class Honours</h4>
@@ -57,71 +64,75 @@
         </section>
       </section>
       <!-- //  WORK EXPERIENCE  // -->
-      <section class="resume-section">
-        <!-- Start content edits below this line.  -->
-        <h2>Work Experience</h2>
-        <p>My complete work history is available on <a href="https://ca.linkedin.com/in/christinatruong" target="_blank">LinkedIn</a>.</p>
-
-        <section class="work-item">
-          <div class="work-details">
-            <h3>Sonar Software Engineer</h3>
-            <p>Defence Science and Technology Group</p>
-            <p>Jan 2023 - Present</p>
-          </div>
-          
-          <div class="work-summary">
-            <p>Developed and maintained software systems for undersea sensor systems and sonar data processing. Engaged in self-managed research activities for generating synthetic audio data using generative AI technologies.</p>
-            <p>Key contributions:</p>
-            <ul>
-              <li>Built and deployed a Docker development environment for cross compiling onto multiple different ARM architecture computers, leveraging containerisation for streamlined development.</li>
-              <li>Leveraged Qt Framework to build a message logging system to record simulation events. Improved memory efficiency by storing messages as byte objects, and demonstrated OOP concepts to develop byte-parsing interface.</li>
-              <li>Used Tensorflow to develop a Generative Adversarial Network (GAN) model to recognise audio data characteristics and synthesise realistic artificial data.</li>
-              <li>Collaborated with team members from project planning to executing effective git version control processes to provide technical support and communication.</li>
-              <li>Worked in an agile environment and followed the scrum process to develop and maintain full-stack software systems.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="work-item">
-          <div class="work-details">
-            <h3>STEM Cadet</h3>
-            <p>Defence Science and Technology Group</p>
-            <p>Jan 2021 - Jan 2023</p>
-          </div>
-          
-          <div class="work-summary">
-            <p>Supported DSTG work programs by developing in-house software tools and undertaking simulation and analysis tasks in accordance with stakeholder plans and requirements.</p>
-            <p>Key contributions:</p>
-            <ul>
-              <li>Developed a Qt3D simulation visualisation GUI. Implemented a publish-subscribe design pattern using a custom abstract item model/view control architecture to reduce system complexity and ensure scalability.</li>
-              <li>Directed and delivered a Monte Carlo study using design of experiments techniques to analyse statistical variance in torpedo performance, understand torpedo decision-making and behaviours, and build domain knowledge.</li>
-              <li>Performed model verification by developing a submarine dynamics MATLAB model from first principles and comparing and contrasting its performance against DSTG's hydroacoustics capability.</li>
-            </ul>
-          </div>
-        </section>
+      <section class="work-experience">
+        <section class="content-wrapper resume-section">
+          <!-- Start content edits below this line.  -->
+          <h2><span class="first-word">Work</span> Experience</h2>
+          <!-- <p>My complete work history is available on <a href="https://ca.linkedin.com/in/christinatruong" target="_blank">LinkedIn</a>.</p> -->
   
-        <section class="work-item">
-          <div class="work-details">
-            <h3>Undergraduate Systems Engineer</h3>
-            <p>University of Adelaide</p>
-            <p>Feb 2020 - Dec 2020</p>
-          </div>
-          
-          <div class="work-summary">
-            <p>Contributed to the design of the Australian Research and Experimental Submarine (ARES) at the University of Adelaide.</p>
-            <p>Key contributions:</p>
-            <ul>
-              <li>Engaged with stakeholders to generate system requirements to lead control system and control surfaces design.</li>
-              <li>Developed and demonstrated a proof-of-concept onboard control system for depth-keeping using microcontroller technologies.</li>
-              <li>Delivered technical specification and justification report for control system and control surfaces design.</li>
-            </ul>
-          </div>
+          <section class="work-item">
+            <div class="work-details">
+              <h3>Sonar Software Engineer</h3>
+              <p>Defence Science and Technology Group</p>
+              <p>Jan 2023 - Present</p>
+            </div>
+            
+            <div class="work-summary">
+              <p>Developed and maintained software systems for undersea sensor systems and sonar data processing. Engaged in self-managed research activities for generating synthetic audio data using generative AI technologies.</p>
+              <p>Key contributions:</p>
+              <ul>
+                <li>Built and deployed a Docker development environment for cross compiling onto multiple different ARM architecture computers, leveraging containerisation for streamlined development.</li>
+                <li>Leveraged Qt Framework to build a message logging system to record simulation events. Improved memory efficiency by storing messages as byte objects, and demonstrated OOP concepts to develop byte-parsing interface.</li>
+                <li>Used Tensorflow to develop a Generative Adversarial Network (GAN) model to recognise audio data characteristics and synthesise realistic artificial data.</li>
+                <li>Collaborated with team members from project planning to executing effective git version control processes to provide technical support and communication.</li>
+                <li>Worked in an agile environment and followed the scrum process to develop and maintain full-stack software systems.</li>
+              </ul>
+            </div>
+          </section>
+  
+          <section class="work-item">
+            <div class="work-details">
+              <h3>STEM Cadet</h3>
+              <p>Defence Science and Technology Group</p>
+              <p>Jan 2021 - Jan 2023</p>
+            </div>
+            
+            <div class="work-summary">
+              <p>Supported DSTG work programs by developing in-house software tools and undertaking simulation and analysis tasks in accordance with stakeholder plans and requirements.</p>
+              <p>Key contributions:</p>
+              <ul>
+                <li>Developed a Qt3D simulation visualisation GUI. Implemented a publish-subscribe design pattern using a custom abstract item model/view control architecture to reduce system complexity and ensure scalability.</li>
+                <li>Directed and delivered a Monte Carlo study using design of experiments techniques to analyse statistical variance in torpedo performance, understand torpedo decision-making and behaviours, and build domain knowledge.</li>
+                <li>Performed model verification by developing a submarine dynamics MATLAB model from first principles and comparing and contrasting its performance against DSTG's hydroacoustics capability.</li>
+              </ul>
+            </div>
+          </section>
+    
+          <section class="work-item">
+            <div class="work-details">
+              <h3>Undergraduate Systems Engineer</h3>
+              <p>University of Adelaide</p>
+              <p>Feb 2020 - Dec 2020</p>
+            </div>
+            
+            <div class="work-summary">
+              <p>Contributed to the design of the Australian Research and Experimental Submarine (ARES) at the University of Adelaide.</p>
+              <p>Key contributions:</p>
+              <ul>
+                <li>Engaged with stakeholders to generate system requirements to lead control system and control surfaces design.</li>
+                <li>Developed and demonstrated a proof-of-concept onboard control system for depth-keeping using microcontroller technologies.</li>
+                <li>Delivered technical specification and justification report for control system and control surfaces design.</li>
+              </ul>
+            </div>
+          </section>
         </section>
+      </section>
+      
     
 
       <!-- //  PROJECTS  // -->
-      <section class="resume-section">
-        <h2>Projects</h2>
+      <section class="content-wrapper resume-section">
+        <h2><span class="first-word">My</span> Projects</h2>
         <p>View selected projects below. More information can be found at <a href="https://christinatruong.com" target="_blank">christinatruong.com</a>.</p>
 
         <div class="project-wrapper">
@@ -159,7 +170,7 @@
         </div>
       </section>
 
-      
+    </section>
 
 
       
