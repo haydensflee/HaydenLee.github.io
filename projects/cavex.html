@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaveX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../docs/flickity.css" media="screen">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../docs/flickity.pkgd.min.js"></script>
+  </head>
+
+  <div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <body class="cavex-page">
+    <!-- //  INTRO  // -->
+
+    <div class="content-wrapper">
+      <div>
+        <header>
+          <!-- Start content edits below this line. -->
+          <h1>CaveX</h1>
+          <h2>A Bio-inspired Cave eXploration Robot</h2>
+          <!-- <h2>Tech Educator + Content Creator</h2> -->
+
+          <!-- End content edits here. -->
+        </header>
+
+        <!-- //  ABOUT ME  // -->
+        <main>
+          
+          <section class="content-section">
+            <p>The CaveX honours project was a design and build project from my final year of Mechatronics Engineering and Computer Science at the Unviersity of Adelaide. We engaged with stakeholders at the Naracoorte Caves, South Australia, to devise a solution to address the difficulties of contemporary cave-mapping techniques. The CaveX robot applies robotics and biomimetics to contribute to geological and palaeontological cave research.</p>
+
+          </section>
+          <section class = "content-section">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Used bioinspiration to design a environmentally low-impact hexapedal cave mapping robot</li>
+              <li>Enabled robot vision by implementing simultaneous localisation and mapping (SLAM) algorithms using LiDAR technologies.</li>
+              <li>Developed walking gaits for the hexapod that allowed it to traverse unsteady cave terrain using robot dynamics and inverse kinematics of the chassis and legs.</li>
+              <li>Thorough communication and collaboration with stakeholders throughout development lifecycle.</li>
+            </ul>
+          </section>
+          <section class = "content-section quote">
+            <h3 style="text-align:center;"><i>"The aim of the CaveX project is to design and build a bio-inspired autonomous robot
+              for the purpose of exploration and 3D mapping of cave systems."</i></h3>
+          </section>
+        </main>
+      </div>
+    </div>
+    <!-- Flickity HTML init -->
+    <section class="work-experience">
+      <section class="slideshow-section">
+        <h2>CaveX Honours Project</h2>
+        <div class="carousel" data-flickity='{ "wrapAround": true }' >
+          <div class="carousel-cell">
+            <img src="../images/cavex-slideshow-1.avif" height=500px alt="orange tree" padding=2%/>
+          </div>
+          <div class="carousel-cell">
+            <img src="../images/cavex-slideshow-final.png" height=500px alt="cat nose" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../images/cavex-slideshow-2.JPG" height=500px  alt="One World Trade" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../images/cavex-slideshow-3.jpg" height=500px alt="drizzle" />
+          </div>
+          <div class="carousel-cell">
+            <img src="../images/cavex-slideshow-4.png" height=500px alt="cat nose" />
+          </div>
+
+          <div class="carousel-cell">
+            <img src="../images/cavex-slam-cloud.png" height=500px alt="cat nose" />
+          </div>
+
+        </div>
+      </section>
+
+    </section>
+
+
+    <div class="content-wrapper">
+      <div>
+        <main>          
+          <section class = "content-section">
+            <h3>Conceptual Design</h3>
+            <ul>
+              <li>Followed a model based systems engineering approach to track and focus effort on achieving stakeholder desired outcomes. Collected stakeholder needs to devise system requirements, and clarified with user stories.</li>
+              <li>Used a hybrid top-down and bottom-up approach to arrive at the final solution to address constraints and uncertainties.</li>
+              <li>To address stakeholder requirement to minimisation of the robot's environmental impact, compared and contrasted various biomimetic designs.</li>
+            </ul>
+
+          </section>
+          <section class="content-section">
+            <h3>Software Implementation</h3>
+            <p>The software design and implementation was my main focus of the project. My objectives were to find solutions to enable the robot to perform various tasks including:</p>
+            <ul>
+              <li>Real-time simultaneous localisation and mapping (SLAM)</li>
+              <li>Walking gait control</li>
+              <li>Path planning and autonomous navigation</li>
+            </ul>
+            <p>I used the robot operating system (ROS) to build the software stack. ROS is an open-source set of software libraries and tools geared towards building robotics applications. The ROS framework is comprised of nodes that can subscripe to topics and push/receive messages to and from other nodes. Through incremental development and testing, I was able to interface all the services that were fundamental to our robot. These controlled the robot's walking gaits, the LiDAR mapping, and sensing and communication subsystems as shown in the diagram below.</p>
+            <img src="../images/cavex-software-diagram.png" alt="CaveX Software Diagram" class="center" width=800px> 
+          </section>
+          
+          <section class="content-section">
+            <h3>Gait Control and Simulation</h3>
+            <p>To control the motors and synchronise them into the hexapod's walking motion, I built an open-source gait control library onto the robot. I adapted the kinematics equations to match the CaveX robot geometry which translated to servo commands. Through testing and refinement, I was able to remotely control the robot's walking motion with three different walking gaits for varying speed and stability. This also allowed for controlling the robot's tilting orientation, which affects the scanning ability of the LiDAR sensor.  </p>
+             
+            <div class="row">
+              <img src="../images/gait-control-1.png" alt="CaveX gazebo" width=32%> 
+              <img src="../images/gait-control-2.png" alt="CaveX gazebo" width=32%> 
+              <img src="../images/gait-control-3.png" alt="CaveX gazebo" width=32%> 
+            </div> 
+            <P>After verifying that the robot's movements in simulation, I used open-source remote-control drivers to allow for robot movements to be controlled at will.</P>
+          </section>
+
+          <section class="content-section">
+            <h3>Scanning and Mapping</h3>
+            <p>To allow the CaveX robot to see its surroundings, I implemented open-source SLAM algorithms onto our platform. The following sceenshots show both 2D and 3D scanned maps of the Engineering honours rooms and demonstrate high fidelity and accuracy in real-time map generation. I also used Gazebo simulations to demonstrate a proof-of-concept path planning functionality. This would form the basis for autonomous navigation, however I was unable to implement this feature due to time constraints.</p>
+             
+            <div class="row">
+              <img src="../images/cavex-mapping-1.png" alt="CaveX gazebo" width=32%> 
+              <img src="../images/cavex-mapping-2.png" alt="CaveX gazebo" width=32%> 
+              <img src="../images/cavex-mapping-3.png" alt="CaveX gazebo" width=32%> 
+            </div> 
+            <P>This scanning capability was also tested in the field. The following screenshots show the high fidelity pointclouds that were collected onsite at the Naracoorte Caves, SA. The left image shows a scan of a low crawl cave space. The right image shows a scan of the Stick-Tomato cave's main chamber.
+            </P>
+
+            <div class="row">
+              <img src="../images/cavex-slam-cloud1.png" alt="CaveX gazebo" width=49%> 
+              <img src="../images/cavex-slam-cloud.png" alt="CaveX gazebo" width=49%> 
+            </div> 
+          </section>
+
+          <section class = "content-section">
+            <p>With over 15 years of experience as a front-end developer, I've had the opportunity to work on a wide range of projects and with many different organizations. I also enjoy sharing knowledge and helping others learn and grow in their careers through teaching. If you're interested in web development or just looking to brush up on your skills, check out my <a href="https://christinatruong.com/courses/" target="_blank">courses</a> or my YouTube series <a href="https://www.youtube.com/@madebychristina" target="_blank">Decoded by Christina</a>.</p>
+
+            <p>To learn more about my work history, check out my <a href="resume.html"> resume</a>. Thanks for stopping by!</p>
+          </section>
+
+        </main>
+      </div>
+    </div>
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer>
+      <p>© 2024 by Hayden Lee |  <a href="mailto:haydenslee@yahoo.com.au">haydenslee@yahoo.com.au</a></p>
+
+      <!-- <ul class="socials">
+        <li>
+          <a href="https://www.youtube.com/@madebychristina" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube channel"></a>
+        </li>
+        <li>
+          <a href="https://ko-fi.com/christinatruong" target="_blank"><img src="images/icon-logo-ko-fi.png" alt="My Ko-Fi homepage"></a>
+        </li>
+        <li>
+          <a href="https://medium.com/@christinatruong" target="_blank"><img src="images/icon-logo-medium.png" alt="My Medium homepage"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/christina.is.online/" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram"></a>
+        </li>
+        <li>
+          <a href="https://ca.linkedin.com/in/christinatruong" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/christinatruong" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter profile"></a>
+        </li>
+      </ul> -->
+    </footer>
+  </body>
+</html>

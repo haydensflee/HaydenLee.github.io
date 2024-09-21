@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noughts And Crosses AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../docs/flickity.css" media="screen"> -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <script src="../docs/flickity.pkgd.min.js"></script> -->
+  </head>
+
+  <div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <body class="cavex-page">
+    <!-- //  INTRO  // -->
+
+    <div class="content-wrapper">
+      <div>
+        <header>
+          <!-- Start content edits below this line. -->
+          <h1>Noughts and Crosses</h1>
+          <h2>AI opponent that won't lose</h2>
+          <!-- <h2>Tech Educator + Content Creator</h2> -->
+
+          <!-- End content edits here. -->
+        </header>
+
+        <!-- //  ABOUT ME  // -->
+        <main>
+          
+          <section class="content-section">
+            <p>This noughts and crosses artificial intelligence was a project I built to solidify my understanding of AI algorithms. It is a C++ program that employs the minimax algorithm for decision-making and game theory to make the optimal move to win. I've also included options for a modified algorithm using alpha-beta pruning and early termination so that the AI behaviour can vary. After all, it would be pretty boring to play a game that is impossible to win!</p>
+          </section>
+          <section class = "content-section">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Designed and implemented an noughts and crosses AI using the minimax algorithm.</li>
+              <li>Added alpha-beta pruning for optimisation.</li>
+              <li>Added early termination options for variation in performance.</li>
+              <li>Currently developing front-end interface.</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <section class="work-experience">
+      <div class="content-wrapper">
+        <h3>Minimax Algorithm Background</h2>
+        <p>Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally. It is widely used in two player turn-based games such as Noughts and Crosses, Backgammon, Chess, etc. In Minimax the two players are referred to as the maximizer and the minimizer. The maximizer tries to get the highest score possible while the minimizer tries to do the opposite and get the lowest score possible. The following figure visualises an example of the minimax algorithm computed on a tree of score nodes.</p>
+        <img src="../images/minimax_tree.png" alt="minimax diagram" width="800px" style="border-radius: 10px;" class="center">
+        <p>Each node represents a state with an associated score that has been calculated by some arbitrary heuristic. At layers 0, 2, and 4, the maximiser is playing, and will pick the path that will lead to a higher score. At layers 1 and 3, the minimiser is playing, and will pick the path that will lead to a lower score. The minimax algorithm traverses the search tree in post-order depth first search (DFS) and back propagates the value for each leaf node back to the very top, which is how it comes to make the decision represented by the blue line (-7 node is picked).</p>
+      </div>
+    </section>
+
+
+    <div class="content-wrapper">
+      <div>
+        <main>          
+          <section class = "content-section">
+            <h3>Noughts and Crosses Minimax Algorithm Design</h3>
+            <p>In this noughts and crosses project, the 'x' player is the maximizer (wins when minimax value = 1) and the 'o' player is the minimizer (wins when minimax value = -1). Minimax value = 0 represents a tie. The following figure gives an example board space and illustrates how the minimax algorithm makes the next decision for the maximiser. The starting board state is the root node of the tree. </p>
+            <img src="../images/minimax_nac1.png" alt="minimax diagram" width="800px" style="border-radius: 15px;" class="center">
+            <p>There are only three possible options for X's move, as shown by the three child nodes under the root node. By traversing the left or middle path, the leaves of these options are board states that either end in a draw or a maximiser win. However back-propagating through each layer shows that the minimiser will make the ideal move for its objective, and so this will ultimately result in a draw. However, the right path results in a guaranteed maximiser win, so therefore this is the correct move to make. This explains how the minimax algorithm works.</p>
+            <p>Two additional modifications to the minimax algorithm have been implemented as well. These are <i><b>Alpha-Beta Pruning</b></i> and <i><b>Early Termination</b></i>.</p>
+          </section>
+          <section class="content-section">
+            <div class="highlight-box">
+              <h3>Alpha-Beta Pruning</h3>
+              <p>Alpha-Beta pruning is not actually a new algorithm, but rather an optimization technique for the minimax algorithm. It reduces the computation time by a huge factor. This allows us to search much faster and even go into deeper levels in the game tree. It cuts off branches in the game tree which need not be searched because there already exists a better move available. It is called Alpha-Beta pruning because it passes 2 extra parameters in the minimax function, namely alpha and beta.</p>
+              <p>Alpha is the best value that the maximizer currently can guarantee at that level or above. Beta is the best value that the minimizer currently can guarantee at that level or below. Consider the following example diagram of a-b pruning.</p>
+              <img src="../images/ab-pruning.jpg" alt="ab pruning diagram" width="800px" style="border-radius: 8px; border: 4px solid black;"  class="center">
+              <p>Everything is normal, up until we traverse node E when we try to minimise node B. Since D was visited first, B promises a minimax value <= 5. As soon as we saw E could be 6, a value greater than the promised 5, we prune all other E branches off because they no longer matter. Anything less than 6 WON'T get chosen, and anything more than 6 WILL get chosen, but it doesn't matter anyways because node B will try to minimise and pick 5 no matter what. This also happens at node A, as once the tree is traversed to F, minimax = 2 is returned to C, which will never get chosen because A promises minimax >=5. Subsequent branches of C are pruned away.</p>
+            </div>
+          </section>
+          <div class="row"></div>
+          <section>
+            <div class="highlight-box">
+              <h3>Early Termination</h3>
+              <p>For further speedups, it is useful to cut-off/terminate early the minimax tree traversal based on a heuristic or evaluation function. However, the cost of early termination is to introduce inaccuracies in the minimax algorithm, and may yield suboptimal moves. A possible evaluation function for tic-tac-toe is as follows:</p>
+
+              <center><b><i>E(s) = M(s) - O(s)</i></b></center>
+                
+              <p>where s is a board state, M(s) and O(s) are respectively the number of possible winning lines for Max and Min after state s.</p>
+              <p>For example, for a board state s given by:</p>
+              <img src="../images/ab-pruning.jpg" alt="ab pruning diagram" width="800px" style="border-radius: 8px; border: 4px solid black;" class="center">
+              <p>Everything is normal, up until we traverse node E when we try to minimise node B. Since D was visited first, B promises a minimax value <= 5. As soon as we saw E could be 6, a value greater than the promised 5, we prune all other E branches off because they no longer matter. Anything less than 6 WON'T get chosen, and anything more than 6 WILL get chosen, but it doesn't matter anyways because node B will try to minimise and pick 5 no matter what. This also happens at node A, as once the tree is traversed to F, minimax = 2 is returned to C, which will never get chosen because A promises minimax >=5. Subsequent branches of C are pruned away.</p>
+            </div>
+          </section>
+          
+          <section class="content-section">
+            <h3>Program Design</h3>
+            <p>The backend program is comprised of a main function and four subfunctions. It takes a boardstate as input from the user and calculates the best move based on the minimax principle. This best move will be printed to the terminal, and all visited nodes and their corresponding minimax values will be written to an output text file. If there exists more than one move with the optimal minimax value, the move that happens earliest in the raster scan order will be chosen. The program can be compiled into a linux executable binary called tictactoe.bin using the makefile. It can be compiled and run as follows:</p>
+            <pre>
+              $ make tictactoe
+              $ ./tactactoe.bin [state] [path]
+            </pre>
+            <p>Where [state] is the raster-scanned boardstate and [path] is the path of the output text file that the program writes to. An example program call would be $ ./tictactoe.bin oxxxo-ox- /home/visited.txt</p>
+            <ul>
+              <li><b>main: </b>
+                <p>Checks input arguments for early termination and alpha-beta pruning. Raster scans input and generates the starting board state. Evaluate board state to determine if a winner exists, and then calculates the optimal move for the current player.</p>
+              </li>
+              <li><b>bestMove: </b><p>Finds the best move for the current player by iterating through all potential moves and recursively calling minimax algorithm for each board state.</p></li>
+              <li><b>minimax: </b>
+                <p>Calculates minimax value for board state. Will continue iterating through all potential moves and backtracking at the termination of each path. Will return once the optimal move has been found.</p></li>
+              <li><b>checkWinner: </b>
+                <p>Checks current state of the board and returns an integer depending on which player has won or if there is a draw game.</p></li>
+              <li><b>evaluate: </b>
+                <p>Function used for early termination. Calculates the number of potential winning lines of the current board state.</p>
+                </li>
+
+            </ul>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+
+
+    <div class="content-wrapper">
+      <h3>Future work</h2>
+      <p>Currently I am working on extending the program by writing a frontend graphical user interface so that users can play a full game of noughts and crosses. I intend on adding additional features such as:</p>
+      <ul>
+        <li>Difficulty selection by modifying the level of early termination</li>
+        <li>Scoreboard, timer, and record keeping</li>
+        <li>Positional advantage bar, which evaluates the board state and indicates which player is favoured to win.</li>
+      </ul>
+    </div>
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer>
+      <p>© 2024 by Hayden Lee |  <a href="mailto:haydenslee@yahoo.com.au">haydenslee@yahoo.com.au</a></p>
+
+      <!-- <ul class="socials">
+        <li>
+          <a href="https://www.youtube.com/@madebychristina" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube channel"></a>
+        </li>
+        <li>
+          <a href="https://ko-fi.com/christinatruong" target="_blank"><img src="images/icon-logo-ko-fi.png" alt="My Ko-Fi homepage"></a>
+        </li>
+        <li>
+          <a href="https://medium.com/@christinatruong" target="_blank"><img src="images/icon-logo-medium.png" alt="My Medium homepage"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/christina.is.online/" target="_blank"><img src="images/icon-logo-instagram.png" alt="My Instagram"></a>
+        </li>
+        <li>
+          <a href="https://ca.linkedin.com/in/christinatruong" target="_blank"><img src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/christinatruong" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter profile"></a>
+        </li>
+      </ul> -->
+    </footer>
+  </body>
+</html>

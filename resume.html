@@ -12,6 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   </head>
+  <div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </div>
   <body class="resume">
     <!-- <a class="btn download-link" href="ctruong-resume.pdf" download>Download PDF</a> -->
     <!-- //  INTRO  // -->
@@ -28,7 +33,7 @@
       </div>
     </header> -->
     <!-- <section class="title-card">
-      helloasdf
+      helloasdf 
     </section> -->
     <section class="banner"></section>
     <header>
@@ -37,20 +42,39 @@
         </div>
         <div class="flex-item">
           <h4> Hi! My name is</h4>
-          <h1 class="personal_text"><span class="first-word">Hayden</span> Lee</h1>
+          <h1><span class="first-word">Hayden</span> Lee</h1>
           <h2>Software Engineer</h2>
           <p>I am a software engineer with a background in Mechatronics Engineering and Computer Science (AI Major). With a comprehensive knowledge of data structures and algorithms, I am passionate about using code to breathe life into technology!</p>
+          <div class="row-icon">
+            <div class="column">
+              <img src="images/c-.png" alt="cpp logo" width=70%> 
+            </div>
+            <div class="column">
+              <img src="images/python.png" alt="cpp logo" width=70%> 
+            </div>
+            <div class="column">
+              <img src="images/qt.png" alt="cpp logo" width=70%> 
+            </div>
+            <div class="column">
+              <img src="images/tensorflow.png" alt="cpp logo" width=70%> 
+            </div>
+            <div class="column">
+              <img src="images/docker.png" alt="cpp logo" width=70%> 
+            </div>
+            <div class="column">
+              <img src="images/git.png" alt="cpp logo" width=70%> 
+            </div>
+            <div class="column">
+              <img src="images/html.png" alt="html logo" width=70%> 
+            </div>
+            <div class="column">
+              <img src="images/css.png" alt="css logo" width=70%> 
+            </div>
+          </div>
         </div>
       </div>
     </header>
-
-    <!-- <header>
-      <div class="content-wrapper">
-        <h1 class="name">Hayden Lee</h1>
-        <h2>Software Engineer</h2>
-      </div>
-    </header> -->
-
+ 
     <main>
       <section class="presection"></section>
       <!-- //  EDUCATION & CERTIFICATIONS  // -->
@@ -59,14 +83,37 @@
 
           <!-- Start content edits below this line.  -->
           <h2><span class="first-word">Education </span> and Skills</h2>
-          <section class="education-item">
-            <h3>University of Adelaide (2018-2022)</h3>
-            <h4>6.50 GPA with First Class Honours</h4>
-            <p>Bachelor of Engineering (Honours) (Mechatronics Major)</p>
-            <p>Bachelor of Computer Science (AI Major)</p>
-          </section>
+          
+          <div class="row">
+            <section class="column">
+              <h3>University of Adelaide (2018-2022)</h3>
+              <h4>6.50 GPA with First Class Honours</h4>
+              <p>Bachelor of Engineering (Honours) (Mechatronics Major)</p>
+              <p>Bachelor of Computer Science (AI Major)</p>
+            </section>
+            <section class="column skill-box"> 
+              <b><p>C++</p></b>
+              <div class="skill-container">
+                <div class="skills cpp">90%</div>
+              </div>
+              <b><p>Python</p></b>
+              <div class="skill-container">
+                <div class="skills python">90%</div>
+              </div>
+              <b><p>Java</p></b>
+              <div class="skill-container">
+                <div class="skills java">40%</div>
+              </div>
+              <b><p>HTML/CSS</p></b>
+              <div class="skill-container">
+                <div class="skills html">60%</div>
+              </div>
+  
+            </section>
+          </div> 
         </section>
-    </section>
+      </section>
+
       <!-- //  WORK EXPERIENCE  // -->
       <section class="work-experience">
         <section class="content-wrapper resume-section">
@@ -85,9 +132,9 @@
               <p>Developed and maintained software systems for undersea sensor systems and sonar data processing. Engaged in self-managed research activities for generating synthetic audio data using generative AI technologies.</p>
               <p>Key contributions:</p>
               <ul>
-                <li>Built and deployed a Docker development environment for cross compiling onto multiple different ARM architecture computers, leveraging containerisation for streamlined development.</li>
                 <li>Leveraged Qt Framework to build a message logging system to record simulation events. Improved memory efficiency by storing messages as byte objects, and demonstrated OOP concepts to develop byte-parsing interface.</li>
                 <li>Used Tensorflow to develop a Generative Adversarial Network (GAN) model to recognise audio data characteristics and synthesise realistic artificial data.</li>
+                <li>Built and deployed a Docker development environment for cross compiling onto multiple different ARM architecture computers, leveraging containerisation for streamlined development.</li>
                 <li>Collaborated with team members from project planning to executing effective git version control processes to provide technical support and communication.</li>
                 <li>Worked in an agile environment and followed the scrum process to develop and maintain full-stack software systems.</li>
               </ul>
@@ -138,40 +185,37 @@
       <section class="project-banner">
         <section class="content-wrapper resume-section">
           <h2><span class="first-word">My</span> Projects</h2>
-          <p>View selected projects below. More information can be found at <a href="https://christinatruong.com" target="_blank">christinatruong.com</a>.</p>
+          <!-- <p>View selected projects below. More information can be found at <a href="https://christinatruong.com" target="_blank">christinatruong.com</a>.</p> -->
   
           <div class="project-wrapper">
-            <section class="project-item">
-              <img src="images/project-decoded-youtube-500px.png" srcset="images/project-decoded-youtube-1000px.png 2x" alt="Decoded by Christina YouTube video thumbnails">
-              <h3>Cave Exploration (CaveX) Robot</h3>
-              <p>Videos, tutorials and a newsletter focusing on HTML, CSS and working in tech. Each video focuses on one HTML or CSS concept. I go over how it works, when to use it and show some real world examples. The companion articles are also posted on Medium as an alternative to video content.</p>
-              <a class="btn" href="https://www.youtube.com/@madebychristina" target="_blank">YouTube</a>
-              <a class="btn" href="https://medium.com/@christinatruong" target="_blank">Medium</a>
-              <a class="btn" href="https://bychristina.substack.com/" target="_blank">Newsletter</a>
-            </section>
-  
-            <section class="project-item">
-              <img src="images/project-courses-500px.png" srcset="images/project-courses-1000px.png 2x" alt="List of course names and thumbnails">
-              <h3>Noughts and Crosses Game</h3>
-              <p>Developed content and instruction for various web development courses including CSS Essential Training, Getting Your Website Online, Getting Your First Job as a Web Developer and more.</p>
-              <a class="btn" href="https://christinatruong.com/courses/" target="_blank">Courses</a>
-            </section>
-  
-            <section class="project-item">
-              <img src="images/project-troy-podcast-500px.png" srcset="images/project-troy-podcast-1000px.png 2x" alt="The TROY podcast website homepage">
-              <h3>Distributed Decision Making Simulation System</h3>
-              <p>A podcast that celebrates the best in music, movies, and TV from the past. Hosted by knowledgeable and passionate fans of the genres, Christina and Miguel delve into the careers and legacies of some of the biggest names in hip hop, R&B, and pop culture. Join us as we reminisce over the artists that have shaped our lives and continue to influence popular culture today. (I also built the website of course!)</p>
-              <a class="btn" href="https://troypodcast.com/" target="_blank">Website</a>
-              <a class="btn" href="https://podcasts.apple.com/us/podcast/they-reminisce-over-you/id1541737531" target="_blank">Apple</a>
-              <a class="btn" href="https://open.spotify.com/show/7JsQ0j7qldRFpHt63AI8Cn" target="_blank">Spotify</a>
-            </section>
-            
-            <section class="project-item">
-              <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-1000px.png 2x" alt="The Wire Ipsum quote generator website">
-              <h3>Chessboard Game</h3>
-              <p>After coming back from teaching a JavaScript workshop, I felt inspired to create something just for fun. I realized that of all the placeholder text/lorem ipsum generators available, there was nothing for HBO’s The Wire fans. Generate some content for your projects today. (Warning: Contains explicit language.)</p>
-              <a class="btn" href="https://thewireipsum.com" target="_blank">Website</a>
-            </section>
+            <a class="btn-project" href="projects/cavex.html" target="_blank">
+              <section class="project-item highlight-box">
+                <img src="images/cavex1.JPG" alt="cavex thumbnail">
+                <h3>Cave Exploration (CaveX) Robot Honours Project</h3>
+                <p>A bio-inspired cave exploration robot. The CaveX robot is a walking hexapod designed to help cave researchers map out cave systems that are dangerous and hard to reach.  Recipient of the MAXMINE prize for Outstanding Technical Engineering.</p>
+              </section>
+            </a>
+            <a class="btn-project" href="projects/noughts-and-crosses.html" target="_blank">
+              <section class="project-item highlight-box">
+                <img src="images/nac-thumbnail.png" alt="nac thumbnail">
+                <h3>Noughts and Crosses AI</h3>
+                <p>A program that can play noughts and crosses (tictactoe). Created by implementing the minimax AI algorithm for optimal moves. Also features alpha-beta pruning. Player can also turn on early termination to tune the AI to perform suboptimal moves for an 'easier' difficulty.</p>
+              </section>
+            </a>
+            <a class="btn-project" href="" target="_blank">
+              <section class="project-item highlight-box">
+                <img src="images/chessboard-thumbnail.png" alt="chess engine thumbanil">
+                <h3>Chessboard Engine</h3>
+                <p>Personal chess engine project. A single player chess game featuring three different pieces with specific behaviours. A demonstration of object-oriented programming techniques including inheritance, polymorphism, and abstract classes.</p>
+              </section>
+            </a>
+            <a class="btn-project" href="" target="_blank">
+              <section class="project-item highlight-box">
+                <img src="images/ddm-thumbnail.png" alt="ddm thumbanil">
+                <h3>Distributed Decision Making Simulator</h3>
+                <p>Software Engineering Project. A simulation system to test performance of various distributed decision making algorithms. Focused on front end development and interface using JavaSwing, as well as scrum master responsibilities.</p>
+              </section>
+            </a>
           </div>
         </section>
   
@@ -184,9 +228,9 @@
     </main>
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer>
-      <p>© 2023 by Christina Truong |  <a href="mailto:email@example.com">email@example.com</a></p>
+      <p>© 2024 by Hayden Lee |  <a href="mailto:haydenslee@yahoo.com.au">haydenslee@yahoo.com.au</a></p>
 
-      <ul class="socials">
+      <!-- <ul class="socials">
         <li>
           <a href="https://www.youtube.com/@madebychristina" target="_blank"><img src="images/icon-logo-youtube.png" alt="My YouTube channel"></a>
         </li>
@@ -205,7 +249,8 @@
         <li>
           <a href="https://twitter.com/christinatruong" target="_blank"><img src="images/icon-logo-twitter.png" alt="My Twitter profile"></a>
         </li>
-      </ul>
+      </ul> -->
     </footer>
   </body>
+  
 </html>
