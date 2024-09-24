@@ -97,6 +97,13 @@
               <center><b><i>E(s) = M(s) - O(s)</i></b></center>
                 
               <p>where s is a board state, M(s) and O(s) are respectively the number of possible winning lines for Max and Min after state s.</p>
+              <p>For example, see the following starting board state:</p>
+              <img src="../images/early-termination-state1.png" alt="">
+              <p>As the maximiser, there are four possible winning board states as shown:</p>
+              <img src="../images/early-termination-state2.png" alt="">
+              <p>Therefore M(s)=4. Meanwhile, the minimiser will have 6 possible winning board states, so O(s)=6. Thus:</p>
+              <p>E(s) = 4 - 6 = -2</p>
+              <p><i>s</i> is more advantageous for the minimiser.</p>
             </div>
           </section>
           
@@ -120,10 +127,16 @@
               <li><b>evaluate: </b>
                 <p>Function used for early termination. Calculates the number of potential winning lines of the current board state.</p>
                 </li>
-
             </ul>
+            <p>For Alpha-Beta pruning:</p>
+            <pre>
+              $ ./tactactoe.bin [state] [path] prune
+            </pre>
+            <p>For early termination by specifying <i>ply</i>, a positive integer that specifies the amximum number of moves (in total from both players) to look ahead.</p>
+            <pre>
+              $ ./tactactoe.bin [state] [path] prune [ply]
+            </pre>
           </section>
-
         </main>
       </div>
     </div>

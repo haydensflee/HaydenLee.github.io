@@ -442,6 +442,15 @@ header .flex-image{
     z-index: 1;
 }
 
+#certificates{
+    background: #252525;
+    padding: 10px;
+    justify-content: space-around;
+    /* align-items: center; */
+    position: relative;
+    z-index: 2;
+}
+
 .resume-section h2 {
     /* border-bottom: 2px groove #d3d4d6; */
     text-align: center;
